@@ -1,4 +1,8 @@
-LampOff SKP dönüştürücü (skp-worker.js) şu açık kaynak yazılımları içerir:
+LampOff dönüştürücü şu açık kaynak yazılımları içerir.
+
+model-worker.js (SKP / OBJ → GLB): OpenSKP, fflate, earcut (aşağıda) + LampOff'un kendi kodu.
+dwg-worker.js, libredwg-web.wasm (DWG → DXF): GNU LibreDWG + @mlightcad/libredwg-web (GPLv3) ve LampOff'un DXF yazıcısı. dwg-worker.js bütünüyle GPLv3 koşullarıyla dağıtılır.
+LampOff'un bu araçtaki kendi kaynak kodu (okunabilir): kaynak/ klasörü (worker.mjs, skplite.mjs, objlite.mjs, glbw.mjs, dwgworker.mjs, dwgdxf.mjs).
 
 == OpenSKP 1.5.0 — MIT ==
 Copyright (c) Ahsan Mehmood
@@ -50,3 +54,13 @@ OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 
+== GNU LibreDWG + @mlightcad/libredwg-web 0.8.8 — GNU General Public License v3 ==
+libredwg-web.wasm, GNU LibreDWG'nin WebAssembly derlemesidir; dwg-worker.js bunun JavaScript sarmalayıcısını ve LampOff'un DXF yazıcısını (kaynak/dwgdxf.mjs) içerir.
+Copyright (C) Free Software Foundation, Inc. (LibreDWG); mlightcad (libredwg-web).
+Bu programlar özgür yazılımdır; GNU GPL sürüm 3 koşullarıyla dağıtılabilir ve değiştirilebilir. HİÇBİR GARANTİSİ YOKTUR.
+Lisansın tam metni: GPL-3.0.txt (bu klasörde).
+Kaynak kodu:
+  - LibreDWG: https://www.gnu.org/software/libredwg/ , https://github.com/LibreDWG/libredwg
+  - libredwg-web (WebAssembly derlemesi ve sarmalayıcı, sürüm 0.8.8): https://github.com/mlightcad/libredwg-web , npm @mlightcad/libredwg-web@0.8.8
+  - LampOff'un DXF yazıcısı ve işçi: kaynak/dwgdxf.mjs, kaynak/dwgworker.mjs
+Kaynak kodunu istemek için: lampoff.info@gmail.com
