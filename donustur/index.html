@@ -72,7 +72,12 @@ function go(list){warn("");const fs=[...(list||[])];if(!fs.length)return;
  else (mf?mf.text():Promise.resolve(null)).then(mtl=>W.postMessage({kind:"obj",file:f,mtl,name,budget,unit:+$("cvU").value||0,up:$("cvUp").value}))}
 $("cvIn").addEventListener("change",e=>{const l=e.target.files;go(l);e.target.value=""});
 const dz=$("cvDrop");["dragenter","dragover"].forEach(k=>dz.addEventListener(k,e=>{e.preventDefault();dz.classList.add("on")}));["dragleave","drop"].forEach(k=>dz.addEventListener(k,e=>{e.preventDefault();dz.classList.remove("on")}));dz.addEventListener("drop",e=>go(e.dataTransfer.files));
-$("cvDl").addEventListener("click",async e=>{if(!window.claude||!window.claude.use)return;e.preventDefault();try{const dl=await window.claude.use("downloads");if(dl)await dl.save({filename:$("cvDl").download,data:new Uint8Array(G)})}catch{}});
+const crcT=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})(),crc=u=>{let c=~0;for(let i=0;i<u.length;i++)c=crcT[(c^u[i])&255]^(c>>>8);return~c>>>0};
+function zip1(name,u){const nb=new TextEncoder().encode(name),c=crc(u),L=new Uint8Array(30+nb.length),a=new DataView(L.buffer);a.setUint32(0,0x04034b50,!0);a.setUint16(4,20,!0);a.setUint16(6,0x800,!0);a.setUint32(14,c,!0);a.setUint32(18,u.length,!0);a.setUint32(22,u.length,!0);a.setUint16(26,nb.length,!0);L.set(nb,30);
+ const C=new Uint8Array(46+nb.length),b=new DataView(C.buffer);b.setUint32(0,0x02014b50,!0);b.setUint16(4,20,!0);b.setUint16(6,20,!0);b.setUint16(8,0x800,!0);b.setUint32(16,c,!0);b.setUint32(20,u.length,!0);b.setUint32(24,u.length,!0);b.setUint16(28,nb.length,!0);C.set(nb,46);
+ const E=new Uint8Array(22),d=new DataView(E.buffer);d.setUint32(0,0x06054b50,!0);d.setUint16(8,1,!0);d.setUint16(10,1,!0);d.setUint32(12,C.length,!0);d.setUint32(16,L.length+u.length,!0);return new Blob([L,u,C,E])}
+/* Claude önizlemesinde (yalnız orada): GLB / DXF indirilemiyor, ZIP içinde verilir */
+$("cvDl").addEventListener("click",async e=>{if(!window.claude||!window.claude.use)return;e.preventDefault();warn("");try{const dl=await window.claude.use("downloads");if(!dl){warn("Bu görünümde indirme yok; sayfayı tarayıcıda açın.");return}const fn=$("cvDl").download;await dl.save({filename:fn+".zip",data:zip1(fn,new Uint8Array(G))});$("cvNext").innerHTML+="<br>Önizlemede dosya ZIP içinde iner; açıp içindeki dosyayı kullanın."}catch(err){if(!(err&&err.code==="declined"))warn("İndirilemedi: "+(err&&(err.message||err.code)||err))}});
 $("cvAgain").addEventListener("click",()=>{warn("");show("pick")});})();
 </script>
 </main>
