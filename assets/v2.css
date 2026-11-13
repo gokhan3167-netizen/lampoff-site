@@ -96,3 +96,12 @@ body{background:var(--k0)}
 .xplat .xw{font-size:clamp(26px,3.3vw,50px)}
 .xfaq .faq{max-width:860px;margin:0 auto}
 .xtri .xp:nth-child(1) img{filter:brightness(.9)}
+/* uyumluluk ızgarası (kayan şerit yerine) */
+.xcomp{max-width:1160px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.xc{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:24px 14px 22px;background:var(--k2);border:1px solid rgba(255,255,255,.07);border-radius:10px;transition:border-color .2s,transform .2s}
+.xc:hover{border-color:rgba(242,154,31,.55);transform:translateY(-2px)}
+.xc svg{width:38px;height:38px;color:var(--amber-2);margin-bottom:4px}
+.xc b{font:700 19px/1.2 var(--cond);letter-spacing:.03em;color:#EDEDE8}
+.xc span{font-size:13.5px;line-height:1.4;color:var(--steel)}
+@media (max-width:980px){.xcomp{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:620px){.xcomp{grid-template-columns:repeat(2,1fr);gap:10px}.xc{padding:18px 10px}}
