@@ -443,3 +443,6 @@ body.navopen .top{backdrop-filter:none;-webkit-backdrop-filter:none;background:v
 .btn.flash,.chip.flash,.cuebar button.flash,.lang.flash,.mi.flash,.ddb.flash,.tabs button.flash,.cvdrop.flash,a.brand.flash,nav a.flash{animation:bump .5s ease-out,tap .65s ease-out}
 .btn:active,.chip:active,.tabs button:active{transform:scale(.97)}
 @media (prefers-reduced-motion:reduce){.btn.flash,.chip.flash,.cuebar button.flash,.lang.flash,.mi.flash,.ddb.flash,.tabs button.flash,.cvdrop.flash,a.brand.flash,nav a.flash{animation:none;box-shadow:0 0 0 3px rgba(242,154,31,.6)}}
+
+/* kart kenar parlaması tıklamaları yutmasın (13 Kas) */
+.card::before{pointer-events:none}
