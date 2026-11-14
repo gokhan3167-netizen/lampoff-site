@@ -142,3 +142,6 @@ footer.ft .flangs a{padding:0;display:inline;color:var(--steel);text-decoration:
 [dir=rtl] .skip{left:auto;right:8px;top:-60px}[dir=rtl] .skip:focus{top:8px;right:8px}
 .xstp{text-align:center;max-width:640px;margin:10px auto 0;color:var(--steel);font-size:15px;line-height:1.55}
 .soon{color:var(--steel);font-size:.9em}
+footer.ft .wrap>div{min-width:0}footer.ft a,footer.ft p{overflow-wrap:anywhere}
+@media (max-width:860px){footer.ft .wrap>div>a{padding:8px 0}footer.ft .flangs a{padding:6px 0}}
+@media (max-width:360px){.top .wrap{gap:8px}.top .brand{font-size:19px;gap:7px}.top .brand img{width:28px;height:28px}.lngb{padding-inline:8px}}
