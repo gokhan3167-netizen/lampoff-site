@@ -120,8 +120,8 @@ body{background:var(--k0)}
 .lgrid a:hover{background:rgba(255,255,255,.06);color:var(--ink)}.lgrid a[aria-current]{color:var(--amber-2);font-weight:600}
 @media (max-width:1000px){.top .lng{margin-left:auto}}
 @media (max-width:520px){.lng .ddp{position:fixed;left:12px;right:12px;top:64px}.lgrid{grid-template-columns:1fr 1fr}}
-.flangs{display:flex;flex-wrap:wrap;gap:6px 16px;padding-top:6px;padding-bottom:22px}
-.flangs a{color:var(--steel);text-decoration:none;font-size:13.5px}.flangs a:hover{color:var(--ink)}
+footer.ft .flangs{display:flex;flex-wrap:wrap;gap:6px 16px;padding-top:6px;padding-bottom:22px}
+footer.ft .flangs a{padding:0;display:inline;color:var(--steel);text-decoration:none;font-size:13.5px}.flangs a:hover{color:var(--ink)}
 /* yazı tipleri: Barlow Latin dışı harfleri içermez */
 .l-fa,.l-ar{--body:'Vazirmatn','Barlow',system-ui,sans-serif;--cond:'Vazirmatn','Barlow Condensed',sans-serif}
 .l-zh{--body:'Barlow','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',system-ui,sans-serif;--cond:'Barlow Condensed','PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
