@@ -165,3 +165,6 @@ footer.ft .flangs a{padding:0;display:inline;color:var(--steel);text-decoration:
 .l2ea{margin-top:32px}.l2ea>p:not(.btag){color:var(--soft);margin:0 0 16px}
 .l2tm{font-size:13px;margin-top:28px}
 @media (max-width:860px){.l2dirs,.l2car{grid-template-columns:1fr}}
+footer.ft .wrap>div{min-width:0}footer.ft a,footer.ft p{overflow-wrap:anywhere}
+@media (max-width:860px){footer.ft .wrap>div>a{padding:8px 0}footer.ft .flangs a{padding:6px 0}}
+@media (max-width:360px){.top .wrap{gap:8px}.top .brand{font-size:19px;gap:7px}.top .brand img{width:28px;height:28px}.lngb{padding-inline:8px}}
