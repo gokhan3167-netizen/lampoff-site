@@ -141,3 +141,4 @@ footer.ft .flangs a{padding:0;display:inline;color:var(--steel);text-decoration:
 @media (max-width:1000px){[dir=rtl] .top .lng{margin-left:0;margin-right:auto}}
 [dir=rtl] .skip{left:auto;right:8px;top:-60px}[dir=rtl] .skip:focus{top:8px;right:8px}
 .xstp{text-align:center;max-width:640px;margin:10px auto 0;color:var(--steel);font-size:15px;line-height:1.55}
+.soon{color:var(--steel);font-size:.9em}
