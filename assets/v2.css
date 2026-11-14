@@ -109,3 +109,34 @@ body{background:var(--k0)}
 .xtri .xp:nth-child(1) img{object-position:50% 12%}
 .xtri .xp:nth-child(3) img{object-position:50% 50%;filter:none}
 .xplat .xp:not(.dim)::after{background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.6))}
+/* dil menüsü */
+.lng{margin-left:4px}
+.lngb{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;background:none;color:var(--soft);font:600 13px/1 var(--body);letter-spacing:.06em;padding:7px 11px;cursor:pointer}
+.lngb:hover,.lng.open .lngb{color:var(--ink);border-color:var(--steel)}
+.lngb svg:first-child{width:16px;height:16px}.lngb .cv{width:11px;height:11px}
+.lng .ddp{left:auto;right:0;min-width:0;width:auto}
+.lgrid{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:2px}
+.lgrid a{display:block;padding:9px 12px;border-radius:8px;color:var(--soft);text-decoration:none;font-size:15px;white-space:nowrap}
+.lgrid a:hover{background:rgba(255,255,255,.06);color:var(--ink)}.lgrid a[aria-current]{color:var(--amber-2);font-weight:600}
+@media (max-width:1000px){.top .lng{margin-left:auto}}
+@media (max-width:520px){.lng .ddp{position:fixed;left:12px;right:12px;top:64px}.lgrid{grid-template-columns:1fr 1fr}}
+.flangs{display:flex;flex-wrap:wrap;gap:6px 16px;padding-top:6px;padding-bottom:22px}
+.flangs a{color:var(--steel);text-decoration:none;font-size:13.5px}.flangs a:hover{color:var(--ink)}
+/* yazı tipleri: Barlow Latin dışı harfleri içermez */
+.l-fa,.l-ar{--body:'Vazirmatn','Barlow',system-ui,sans-serif;--cond:'Vazirmatn','Barlow Condensed',sans-serif}
+.l-zh{--body:'Barlow','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',system-ui,sans-serif;--cond:'Barlow Condensed','PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+.l-ja{--body:'Barlow','Hiragino Sans','Yu Gothic','Meiryo','Noto Sans JP',system-ui,sans-serif;--cond:'Barlow Condensed','Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif}
+.l-ru{--cond:'Barlow Condensed','Roboto Condensed','Arial Narrow',sans-serif}
+.l-zh .xhero h1,.l-ja .xhero h1{letter-spacing:.02em;line-height:1.15}
+.l-fa .xhero h1,.l-ar .xhero h1{line-height:1.35}
+.l-fa .xkick,.l-ar .xkick,.l-zh .xkick,.l-ja .xkick{letter-spacing:.12em}
+/* sağdan sola (fa, ar) */
+[dir=rtl] .v2 .mk{margin-right:0;margin-left:10px}
+[dir=rtl] .xtxt ul{text-align:right}
+[dir=rtl] .xtxt li{padding:7px 22px 7px 0}[dir=rtl] .xtxt li::before{left:auto;right:2px}
+[dir=rtl] .cmpw,[dir=rtl] .cmp2,[dir=rtl] .stats,[dir=rtl] .xtri,[dir=rtl] .xplat{direction:ltr}
+[dir=rtl] .xtri .xs,[dir=rtl] .xplat .xs,[dir=rtl] .xplat .obtn{direction:rtl}
+[dir=rtl] .ddp{left:auto;right:-8px}[dir=rtl] .lng .ddp{right:auto;left:0}
+[dir=rtl] .specs dt,[dir=rtl] .specs dd,[dir=rtl] .faq summary,[dir=rtl] .faq p{text-align:right}
+@media (max-width:1000px){[dir=rtl] .top .lng{margin-left:0;margin-right:auto}}
+[dir=rtl] .skip{left:auto;right:8px;top:-60px}[dir=rtl] .skip:focus{top:8px;right:8px}
