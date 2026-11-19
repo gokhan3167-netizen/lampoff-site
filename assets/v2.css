@@ -184,3 +184,16 @@ footer.ft .wrap>div{min-width:0}footer.ft a,footer.ft p{overflow-wrap:anywhere}
 .stduo figure:hover img{transform:scale(1.03)}
 .stduo figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;background:linear-gradient(0deg,rgba(6,7,8,.85),transparent);color:#d9dde3;font-size:13.5px}
 @media (max-width:700px){.ststage{aspect-ratio:4/3}.stui{width:70%;top:auto;bottom:16%;right:-14%}[dir=rtl] .stui{left:-14%}.stduo{grid-template-columns:1fr}}
+/* Studio özellik kartları (19 Kas 2026) */
+.stfh{font:700 clamp(20px,2.2vw,24px)/1.15 var(--cond);margin:34px 0 14px}
+.stfeat{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stf{margin:0;border-radius:12px;overflow:hidden;background:#0d0f12;border:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column}
+.stf img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .5s ease}
+.stf:hover img{transform:scale(1.04)}
+.stf figcaption{padding:10px 12px 13px;display:flex;flex-direction:column;gap:4px}
+.stf b{font:600 15px/1.2 var(--cond);color:#eef1f4;letter-spacing:.01em}
+.stf span{font-size:13px;line-height:1.4;color:#a9b0b8}
+@media (max-width:900px){.stfeat{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.stf span{font-size:12.5px}}
+.stvid{border-radius:14px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.07)}
+.stvid video{display:block;width:100%;height:auto;aspect-ratio:1024/438}
