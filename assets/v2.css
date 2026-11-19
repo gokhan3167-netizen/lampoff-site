@@ -195,3 +195,5 @@ footer.ft .wrap>div{min-width:0}footer.ft a,footer.ft p{overflow-wrap:anywhere}
 .stf span{font-size:13px;line-height:1.4;color:#a9b0b8}
 @media (max-width:900px){.stfeat{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:420px){.stf span{font-size:12.5px}}
+.stvid{border-radius:14px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.07)}
+.stvid video{display:block;width:100%;height:auto;aspect-ratio:1024/438}
