@@ -197,3 +197,21 @@ footer.ft .wrap>div{min-width:0}footer.ft a,footer.ft p{overflow-wrap:anywhere}
 @media (max-width:420px){.stf span{font-size:12.5px}}
 .stvid{border-radius:14px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.07)}
 .stvid video{display:block;width:100%;height:auto;aspect-ratio:1024/438}
+/* Yorumlar (19 Kas 2026) */
+.xrev .wrap{max-width:820px}
+.yrs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0 0 28px}
+.yr{margin:0;padding:18px 18px 16px;border-radius:14px;background:#0d0f12;border:1px solid rgba(255,255,255,.07)}
+.yr blockquote{margin:0 0 12px;font-size:15px;line-height:1.55;color:#e6e9ec}
+.yr figcaption{display:flex;flex-direction:column;gap:2px;font-size:13px}.yr figcaption span{color:#8b939c}
+.yempty{text-align:center;color:#8b939c;margin:0 0 22px}
+.yform{display:flex;flex-direction:column;gap:14px;padding:22px;border-radius:16px;background:#0b0d10;border:1px solid rgba(255,255,255,.08)}
+.yform .yrow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.yform label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#a9b0b8}
+.yform input,.yform textarea{font:inherit;font-size:15px;color:#eef1f4;background:#121519;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 12px;outline:none}
+.yform input:focus,.yform textarea:focus{border-color:rgba(242,154,31,.6)}
+.yform textarea{resize:vertical;min-height:96px}
+.yform .ychk{flex-direction:row;align-items:flex-start;gap:10px}.yform .ychk input{margin-top:3px;width:16px;height:16px;accent-color:#f29a1f}
+.yform button{align-self:flex-start}.yform button[disabled]{opacity:.6;pointer-events:none}
+.yhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.ymsg{margin:0;font-size:14px}.ymsg.ok{color:#7fd88f}.ymsg.err{color:#ff9a8a}.ymsg a{color:inherit}
+@media (max-width:640px){.yform .yrow{grid-template-columns:1fr}.yform{padding:16px}}
