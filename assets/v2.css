@@ -193,9 +193,5 @@ footer.ft .wrap>div{min-width:0}footer.ft a,footer.ft p{overflow-wrap:anywhere}
 .stf figcaption{padding:10px 12px 13px;display:flex;flex-direction:column;gap:4px}
 .stf b{font:600 15px/1.2 var(--cond);color:#eef1f4;letter-spacing:.01em}
 .stf span{font-size:13px;line-height:1.4;color:#a9b0b8}
-.stchips{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:18px 0 6px}
-.stchips>span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7d8590;margin-inline-end:4px}
-.stchips ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.stchips li{font-size:13px;padding:5px 11px;border-radius:999px;border:1px solid rgba(242,154,31,.3);color:#f3e2c8;background:rgba(242,154,31,.06)}
 @media (max-width:900px){.stfeat{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:420px){.stf span{font-size:12.5px}}
