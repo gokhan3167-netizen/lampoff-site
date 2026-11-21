@@ -472,3 +472,5 @@ body.navopen .top{backdrop-filter:none;-webkit-backdrop-filter:none;background:v
 .rold>summary small{color:var(--steel);font-weight:400;font-size:14px;margin-left:6px}
 .rold .rel2{padding:24px 0}.rold .rhd h2{font-size:26px}
 @media (max-width:760px){ .rcols{grid-template-columns:1fr} .rbox{padding:16px 16px} .rhd h2{font-size:30px} }
+
+.ig+.ig{margin-left:18px}
